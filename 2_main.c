@@ -20,15 +20,15 @@ int main(void)
         {
             printf("A");
         }
-        else if (score > 80)
+        else if (score >= 80)
         {
             printf("B");
         }
-        else if (score > 70)
+        else if (score >= 70)
         {
             printf("C");
         }
-        else if (score > 60)
+        else if (score >= 60)
         {
             printf("D");
         }
