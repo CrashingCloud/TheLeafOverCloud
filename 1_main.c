@@ -1,7 +1,8 @@
 //202510304106
 //18957760988@163.com
 //叶子恒
-include<stdio.h> 
+
+#include<stdio.h> 
 int main(void)
 {
     int n = 0;
