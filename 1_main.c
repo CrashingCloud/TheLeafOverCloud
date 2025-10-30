@@ -9,6 +9,10 @@ int main(void)
     int k = 0;
     printf("n=");
     scanf("%d",&n);
+    if (n>50)
+    {
+        return 0;
+    }
     if (n % 2 == 0)
     {
         printf("密钥不安全，请重新输入");
