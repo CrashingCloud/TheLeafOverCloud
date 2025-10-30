@@ -9,13 +9,18 @@ int main(void)
     int k = 0;
     printf("n=");
     scanf("%d",&n);
-    if (n>50)
+    if (n>=50 || n<=0)
     {
         return 0;
     }
     if (n!=2 && n % 2 == 0)
     {
         printf("密钥不安全，请重新输入");
+        return 0;
+    }
+    if (n==2)
+    {
+        printf("密钥安全，密码设置成功");
         return 0;
     }
     for (int i = 1;i<50;i+=2)
@@ -25,7 +30,7 @@ int main(void)
             k+=1;
        }
     }
-    if (k<=2)
+    if (k==2)
     {
         printf("密钥安全，密码设置成功");
     }
