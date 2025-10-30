@@ -20,7 +20,7 @@ int main(void)
         m=n;
     }
 
-    while (i<m)
+    while (i<=m)
     {
         if (n%i==0)
         {
