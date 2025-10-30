@@ -22,7 +22,7 @@ int main(void)
         }
         i+=1;
     }
-    if (cnt<=2)
+    if (cnt==2)
     {
         printf("密钥安全，密码设置成功");
     }
