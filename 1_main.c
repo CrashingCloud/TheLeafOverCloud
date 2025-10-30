@@ -22,7 +22,7 @@ int main(void)
     {
         m=n;
     }
-    for (int i = 1;i<m;i+=2)
+    for (int i = 1;i<=m;i+=2)
     {
        if (n%i==0)
        {
