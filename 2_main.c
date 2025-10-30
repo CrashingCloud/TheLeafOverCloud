@@ -2,40 +2,27 @@
 //18957760988@163.com
 //叶子恒
 #include <stdio.h>
-
 int main(void)
 {
-    int score;
-    printf("Score：");
-    scanf("%d",&score);
-    //printf("%d",score);
-    if (score < 0 || score > 100)
+    int a,b,c;
+    int sum;
+    int cnt=0;
+    for (int i = 100;i<=999;i++)
     {
-        printf("null");
-    }
-    else
-    {
-        printf("Grade:");
-        if (score >= 90)
+        a=i/100;
+        b=i/10%10;
+        c=i%10;
+        sum=a*a*a+b*b*b+c*c*c;
+        if (i==sum && cnt==1)
         {
-            printf("A");
+            printf(" %d",sum);
         }
-        else if (score >= 80)
+        if (i==sum && cnt==0) 
         {
-            printf("B");
-        }
-        else if (score >= 70)
-        {
-            printf("C");
-        }
-        else if (score >= 60)
-        {
-            printf("D");
-        }
-        else 
-        {
-            printf("E");
+            printf("%d",sum);
+            cnt=1;
         }
     }
+
     return 0;
 }
