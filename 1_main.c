@@ -13,7 +13,7 @@ int main(void)
     {
         return 0;
     }
-    if (n % 2 == 0)
+    if (n!=2 && n % 2 == 0)
     {
         printf("密钥不安全，请重新输入");
         return 0;
