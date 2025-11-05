@@ -3,7 +3,7 @@
 //叶子恒
 #include<stdio.h>
 
-int arr[5];
+int arr[5]={1,2,3,4,5};
 
 int sum(int p,int l)
 {
@@ -27,10 +27,10 @@ int multi(int p,int l)
 
 int main(void)
 {
-    for (int i=0;i<5;i++)
-    {
-        scanf("%d",&arr[i]);
-    }
+    //for (int i=0;i<5;i++)
+    //{
+        //scanf("%d",&arr[i]);
+    //}
     int s,m;
     s=sum(2,3);
     printf("%d ",s);
