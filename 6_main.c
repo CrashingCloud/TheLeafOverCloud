@@ -3,22 +3,21 @@
 //叶子恒
 #include<stdio.h>
 
-int arr[5]={1,2,3,4,5};
 
-int sum(int p,int l)
+int sum(int arr[],int l)
 {
     int s=0;
-    for (int i=p;i<p+l;i++)
+    for (int i=0;i<l;i++)
     {
         s+=arr[i];
     }
     return s;
 }
 
-int multi(int p,int l)
+int multi(int arr[],int l)
 {
     int m=1;
-    for (int i=p;i<p+l;i++)
+    for (int i=0;i<l;i++)
     {
         m=m*arr[i];
     }
@@ -27,13 +26,15 @@ int multi(int p,int l)
 
 int main(void)
 {
-    //for (int i=0;i<5;i++)
-    //{
-        //scanf("%d",&arr[i]);
-    //}
+    int arr[5];
+    for (int i=0;i<5;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
     int s,m;
-    s=sum(2,3);
+    int p1,p2,l1,l2;
+    s=sum(arr,5);
     printf("%d ",s);
-    m=multi(0,5);
+    m=multi(arr,5);
     printf("%d",m);
 }
