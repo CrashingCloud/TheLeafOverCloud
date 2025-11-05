@@ -4,39 +4,33 @@
 #include<stdio.h>
 int main(void)
 {
-    int n = 0;
-    int i = 1;
-    int cnt = 0;
-    int m = 50;
-    printf("n=");
-    scanf("%d",&n);
-    if (n!=2 && n % 2 == 0)
+    int arr[10];
+    int temp;
+    for (int i=0;i<10;i++)
     {
-        printf("密钥不安全，请重新输入");
-        return 0;
+        scanf("%d",&arr[i]);
     }
-    if (n<m)
+    for (int i=9;i>0;i--)
     {
-        m=n;
-    }
-
-    while (i<=m)
-    {
-        if (n%i==0)
+        for (int j=0;j<i;j++)
         {
-            cnt+=1;
+            if (arr[j]>arr[j+1])
+            {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
         }
-        i+=2;
     }
-    if (cnt==2 || n==2)
+    for (int i=0;i<10;i++)
     {
-        printf("密钥安全，密码设置成功");
+        if (i<9)
+        {
+            printf("%d ",arr[i]);
+        }
+        else
+        {
+            printf("%d",arr[i]);
+        }
     }
-    else
-    {
-        printf("密钥不安全，请重新输入");
-    }
-    return 0;
-
-
 }
