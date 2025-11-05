@@ -2,19 +2,28 @@
 //18957760988@163.com
 //叶子恒
 #include<stdio.h>
+
+void reve(int arr[],int l)
+{
+    int n=0;
+    n=l/2;
+    int temp;
+    for (int i=0;i<n;i++)
+    {
+        temp=arr[i];
+        arr[i]=arr[l-1-i];
+        arr[l-1-i]=temp;
+    }
+    
+}
 int main(void)
 {
     int arr[5];
-    //scanf("%d %d %d %d",&arr[0],&arr[1],&arr[2],&arr[3]);
-    for (int i=0;i<4;i++)
+    for (int i=0;i<5;i++)
     {
         scanf("%d",&arr[i]);
     }
-    for (int i=4;i>0;i--)
-    {
-        arr[i]=arr[i-1];
-    }
-    arr[0]=0;
+    reve(arr,5);
     for (int i=0;i<5;i++)
     {
         if (i<4)
@@ -25,7 +34,7 @@ int main(void)
         {
             printf("%d",arr[i]);
         }
+        
     }
-
-
+    return 0;
 }
