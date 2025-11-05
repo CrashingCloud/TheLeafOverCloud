@@ -4,25 +4,30 @@
 #include <stdio.h>
 int main(void)
 {
-    int a,b,c;
-    int sum;
-    int cnt=0;
-    for (int i = 100;i<=999;i++)
+    int mat[3][3];
+    int tMat[3][3];
+    for (int i=0;i<3;i++)
     {
-        a=i/100;
-        b=i/10%10;
-        c=i%10;
-        sum=a*a*a+b*b*b+c*c*c;
-        if (i==sum && cnt==1)
+        for (int j=0;j<3;j++)
         {
-            printf(" %d",sum);
-        }
-        if (i==sum && cnt==0) 
-        {
-            printf("%d",sum);
-            cnt=1;
+            scanf("%d",&mat[i][j]);
         }
     }
+    for (int j=0;j<3;j++)
+    {
+        for (int i=0;i<3;i++)
+        {
+            tMat[i][j]=mat[j][i];
+        }
 
+    }
+    for (int i=0;i<3;i++)
+    {
+        for (int j=0; j<2; j++)
+        {
+            printf("%d ",tMat[i][j]);
+        }
+        printf("%d\r\n",tMat[i][2]);
+    }
     return 0;
 }
