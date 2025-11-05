@@ -2,27 +2,38 @@
 //18957760988@163.com
 //叶子恒
 #include<stdio.h>
+
+int arr[5];
+
+int sum(int p,int l)
+{
+    int s=0;
+    for (int i=p;i<p+l;i++)
+    {
+        s+=arr[i];
+    }
+    return s;
+}
+
+int multi(int p,int l)
+{
+    int m=1;
+    for (int i=p;i<p+l;i++)
+    {
+        m=m*arr[i];
+    }
+    return m;
+}
+
 int main(void)
 {
-    int arr[5];
-    int cnt=0;
-    int a;
-    int i=0;
-    while (cnt<5)
+    for (int i=0;i<5;i++)
     {
-        scanf("%d",&a);
-        if (a%2==0)
-        {
-            arr[i]=a;
-            cnt+=1;
-            i++;
-        }
+        scanf("%d",&arr[i]);
     }
-    for (int j=0;j<4;j++)
-    {
-        printf("%d ",arr[j]);
-    }
-    printf("%d",arr[4]);
-    
-    return 0;
+    int s,m;
+    s=sum(2,3);
+    printf("%d ",s);
+    m=multi(0,5);
+    printf("%d",m);
 }
