@@ -2,28 +2,35 @@
 //18957760988@163.com
 //叶子恒
 #include<stdio.h>
+
+int power(int a,int b)
+{
+        
+    if (b==0)
+    {
+        a=1;
+            
+    }
+    else if (b==1)
+    {
+        a=a;
+    }
+    else if (b>1)
+    {
+        for (int i=0;i<b-1;i++)
+        {
+            a=a*a;
+        }
+     }
+    return a;
+}
+    
 int main(void)
 {
-    int a,b,c;
-    int i = 100;
-    int sum = 0;
-    int cnt = 0;
-    while (i<=999)
+    int sum=0;
+    for (int i=1;i<=5;i++)
     {
-        a=i/100;
-        b=i/10%10;
-        c=i%10;
-        sum=a*a*a+b*b*b+c*c*c;
-        if (i==sum && cnt==1)
-        {
-            printf(" %d",sum);
-        }
-        if (i==sum && cnt==0) 
-        {
-            printf("%d",sum);
-            cnt=1;
-        }
-        i+=1;
+        sum+=power(i,2);
     }
-    return 0;
+    printf("%d",sum);
 }
