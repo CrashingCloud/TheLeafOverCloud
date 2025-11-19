@@ -2,39 +2,26 @@
 //18957760988@163.com
 //叶子恒
 #include<stdio.h>
-
-
-int sum(int arr[],int l)
-{
-    int s=0;
-    for (int i=0;i<l;i++)
-    {
-        s+=arr[i];
-    }
-    return s;
-}
-
-int multi(int arr[],int l)
-{
-    int m=1;
-    for (int i=0;i<l;i++)
-    {
-        m=m*arr[i];
-    }
-    return m;
-}
-
+#include<stdlib.h>
 int main(void)
 {
-    int arr[5];
+    int *p=(int*)malloc(5*sizeof(int));
+    if (p == NULL)
+    {
+        printf("内存分配失败\r\n");
+        return 1;
+    }
     for (int i=0;i<5;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",p+i);
     }
-    int s,m;
-    int p1,p2,l1,l2;
-    s=sum(arr,5);
-    printf("%d ",s);
-    m=multi(arr,5);
-    printf("%d",m);
+    for (int i=0;i<4;i++)
+    {
+        printf("%d ",*(p+i));
+    }
+    printf("%d",*(p+4));
+
+    free(p);
+    p=NULL;
+    return 0;
 }
