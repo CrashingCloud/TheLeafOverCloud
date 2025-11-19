@@ -1,33 +1,23 @@
 //202510304106
 //18957760988@163.com
 //叶子恒
-#include <stdio.h>
+#include<stdio.h>
 int main(void)
 {
-    int mat[3][3];
-    int tMat[3][3];
-    for (int i=0;i<3;i++)
+    int arr[5];
+    for (int i=0;i<5;i++)
     {
-        for (int j=0;j<3;j++)
-        {
-            scanf("%d",&mat[i][j]);
-        }
+        scanf("%d",&arr[i]);
     }
-    for (int j=0;j<3;j++)
+    int *p=arr;
+    for (int i=0;i<5;i++)
     {
-        for (int i=0;i<3;i++)
-        {
-            tMat[i][j]=mat[j][i];
-        }
-
+        *(p+i)*=2;
     }
-    for (int i=0;i<3;i++)
+    for (int i=0;i<4;i++)
     {
-        for (int j=0; j<2; j++)
-        {
-            printf("%d ",tMat[i][j]);
-        }
-        printf("%d\r\n",tMat[i][2]);
+        printf("%d ",arr[i]);
     }
+    printf("%d",arr[4]);
     return 0;
 }
