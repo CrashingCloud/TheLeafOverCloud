@@ -3,34 +3,26 @@
 //叶子恒
 #include<stdio.h>
 
-int power(int a,int b)
+void arrPlus(int arr[])
 {
-        
-    if (b==0)
+    int *p=arr;
+    for (int i=0;i<5;i++)
     {
-        a=1;
-            
+        *(p+i)+=1;
     }
-    else if (b==1)
-    {
-        a=a;
-    }
-    else if (b>1)
-    {
-        for (int i=0;i<b-1;i++)
-        {
-            a=a*a;
-        }
-     }
-    return a;
 }
-    
 int main(void)
 {
-    int sum=0;
-    for (int i=1;i<=5;i++)
+    int arr[5];
+    for (int i=0;i<5;i++)
     {
-        sum+=power(i,2);
+        scanf("%d",&arr[i]);
     }
-    printf("%d",sum);
+    arrPlus(arr);
+    for (int i=0;i<4;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    printf("%d",arr[4]);
+    return 0;
 }
